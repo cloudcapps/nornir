@@ -2,3 +2,5 @@
 platform: "ios"
 username: "jcapps"
 password: "cisco"
+extras: {auth_strict_key: false, ssh_config_file: false, transport: ssh2}
+port: 22
