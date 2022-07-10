@@ -763,3 +763,185 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
 
 
 2022-07-09 13:52:07,291 -  nornir.core -     INFO -        run() - Running task 'show_commands_test' with args {} on 4 hosts
+2022-07-09 18:05:33,833 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
+2022-07-09 18:08:13,342 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
+2022-07-09 18:08:13,344 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:08:13,344 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:08:13,344 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:08:13,345 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:08:13,345 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:08:13,345 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:08:13,345 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:08:13,345 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:09:49,153 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
+2022-07-09 18:09:49,154 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:09:49,155 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:09:49,155 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:09:49,155 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:09:49,155 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:09:49,156 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-07-09 18:09:49,156 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:09:49,156 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 8, in pull_structed_data
+    version_result = task.run(task=netmiko_send_command, command="show version")
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2022-07-09 18:11:10,356 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
+2022-07-09 18:31:22,688 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
+2022-07-09 18:31:23,324 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 10, in pull_structed_data
+    task.host ["facts"] = version_result.genie_parse_output()
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'genie_parse_output'
+
+2022-07-09 18:31:23,426 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 10, in pull_structed_data
+    task.host ["facts"] = version_result.genie_parse_output()
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'genie_parse_output'
+
+2022-07-09 18:31:23,427 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 10, in pull_structed_data
+    task.host ["facts"] = version_result.genie_parse_output()
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'genie_parse_output'
+
+2022-07-09 18:31:23,472 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'pull_structed_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/jcapps/nornir/runbook4.py", line 10, in pull_structed_data
+    task.host ["facts"] = version_result.genie_parse_output()
+  File "/home/jcapps/nornir/.venv/lib/python3.10/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'genie_parse_output'
+
+2022-07-09 18:31:28,524 -  nornir.core -     INFO -        run() - Running task 'pull_structed_data' with args {} on 4 hosts
